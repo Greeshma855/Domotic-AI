@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import LandingPage from "./newpages/LandingPage";
+import LandingPage from "./pages/LandingPage";
 import Custom404 from "./pages/Custom404";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import SmartHome from "./newpages/SmartHome";
-import AboutSmartHome from "./newpages/AboutSmartHome";
-import Features from "./newpages/Features";
-import Window from "./newpages/Window";
-import FAQ from "./newpages/FAQ";
-import ContactUs from "./newpages/Contactus";
-import SignupPage from "./newpages/SignupPage";
-import LoginPage from "./newpages/LoginPage";
+import SmartHome from "./pages/SmartHome";
+import AboutSmartHome from "./pages/AboutSmartHome";
+import Features from "./pages/Features";
+import Window from "./pages/Window";
+import FAQ from "./pages/FAQ";
+import ContactUs from "./pages/Contactus";
+import SignupPage from "./pages/SignupPage";
+import LoginPage from "./pages/LoginPage";
 import SmartHomeDashboard from "./SmartHomeDashboard";
 import AnalyticsDashboard from './AnalyticsDashboard';
 

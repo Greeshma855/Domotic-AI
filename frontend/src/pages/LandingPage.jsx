@@ -5,7 +5,7 @@ import SmartHome from './SmartHome';
 import AboutSmartHome from './AboutSmartHome';
 import Features from './Features';
 import Window from './Window';
-import FAQ from '../pages/faqsec';
+import FAQ from './FAQ';
 import ContactUs from './Contactus';
 import LandingScreen from './LandingScreen';
 
