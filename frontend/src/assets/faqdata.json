@@ -1,0 +1,90 @@
+{
+    "PRODUCT": [
+        {
+            "id": 11,
+            "question": "What is DomoticAI?",
+            "answer": "DomoticAI is an IoT-based voice-enabled automation system that simplifies everyday tasks by allowing you to control and monitor various appliances and systems in your home, office, hotel, or outdoor environments. It integrates lighting, security, entertainment, access control, and more, all through voice commands."
+        },
+        {
+            "id": 12,
+            "question": "How does DomoticAI work?",
+            "answer": "DomoticAI uses the latest IoT technology to connect smart devices, sensors, and appliances to a centralized platform. Through voice recognition and commands, users can control and automate different systems, such as lighting, security, climate, and entertainment devices."
+        },
+        {
+            "id": 13,
+            "question": "What devices are supported by DomoticAI?",
+            "answer": "DomoticAI supports a wide range of IoT-enabled devices, including smart lights, thermostats, security cameras, door locks, entertainment systems, and more. The platform can be easily expanded to support additional devices as they become available."
+        },
+        {
+            "id": 14,
+            "question": "Is DomoticAI compatible with existing smart home systems?",
+            "answer": "Yes, DomoticAI can integrate with most existing smart home systems such as Amazon Alexa, Google Assistant, and other third-party IoT devices. This allows users to control their existing setup through voice commands and our platform."
+        }
+    ],
+    "DEVICES": [
+        {
+            "id": 21,
+            "question": "What types of devices can i control with DomoticAI?",
+            "answer": "You can control a variety of smart devices, including smart lights, thermostats, security cameras, door locks, and smart speakers. DomoticAI allows you to integrate all these devices into one platform for seamless control."
+        },
+        {
+            "id": 22,
+            "question": "Do i need to buy specific devices for DomoticAI?",
+            "answer": "While DomoticAI is compatible with a wide range of IoT devices, it is recommended to use devices that are known to be compatible with the platform for optimal performance. However, we continuously expand our supported device list."
+        },
+        {
+            "id": 23,
+            "question": "Can i control devices remotely with DomoticAI?",
+            "answer": "Yes, DomoticAI allows users to control and monitor devices remotely via the web interface or mobile app, ensuring convenience and flexibility when you’re away from home or office."
+        },
+        {
+            "id": 24,
+            "question": "How do i set up devices with DomoticAI?",
+            "answer": "Setting up devices with DomoticAI is easy. Once your devices are connected to the internet, you can add them to the system via the DomoticAI web app or mobile app. Follow the simple step-by-step instructions for each device to complete the setup."
+        }
+    ],
+    "SUBSCRIPTION": [
+        {
+            "id": 31,
+            "question": "What is the cost of using DomoticAI?",
+            "answer": "DomoticAI offers a basic version of $29 with basic features, as well as other premium subscription plans that provide advanced functionality, more device support, and additional customization options. Pricing details are available on our website."
+        },
+        {
+            "id": 32,
+            "question": "Are there any subscription tiers?",
+            "answer": "Yes, DomoticAI offers different subscription tiers to suit various needs. The basic tier provides essential automation and control features, while the premium tier unlocks advanced functionalities such as remote control, extended device integration, and voice command optimization."
+        },
+        {
+            "id": 33,
+            "question": "Can i cancel my subscription anytime?",
+            "answer": "Yes, you can cancel your subscription at any time without penalties. If you’re on a subscription plan, your service will continue until the end of your billing cycle, and you won’t be charged for the next period."
+        },
+        {
+            "id": 34,
+            "question": "Is there a free trial available for premium features?",
+            "answer": "Yes, we offer a 14-day free trial of our premium features. During the trial, you can explore all the advanced functions of DomoticAI, including enhanced voice commands and extended device support."
+        }
+    ],
+    "OTHERS": [
+        {
+            "id": 41,
+            "question": "Is DomoticAI secure?",
+            "answer": "Yes, security is a top priority for us. DomoticAI uses state-of-the-art encryption to protect your personal data and ensure that all communication between your devices and the platform is secure. We also provide two-factor authentication for added protection."
+        },
+        {
+            "id": 42,
+            "question": "Can DomoticAI be used in outdoor environments?",
+            "answer": "Absolutely! DomoticAI is designed to work in various environments, including outdoor spaces. Whether it's controlling garden lights, outdoor security cameras, or managing your smart irrigation system, DomoticAI has you covered."
+        },
+        {
+            "id": 43,
+            "question": "How can i integrate voice assistants like alexa or google assistant?",
+            "answer": "Integrating voice assistants is simple. From the DomoticAI app, navigate to the voice assistant integration section, and follow the instructions to link your Amazon Alexa or Google Assistant account. Once linked, you can control your devices using voice commands."
+        },
+        {
+            "id": 44,
+            "question": "Does DomoticAI require an internet connection to work?",
+            "answer": "Yes, DomoticAI relies on an internet connection to communicate with your devices, process commands, and update settings. However, many devices can continue to function locally for basic operations even if the internet is temporarily down."
+        }
+    ]
+}
