@@ -6,7 +6,7 @@ const ParallaxSection = () => {
     <div className="w-full">
       {/* Parallax Section */}
       <section
-        className="relative w-full h-[80vh] bg-cover bg-center bg-fixed"
+        className="relative w-full min-h-screen bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundPosition: "center center", // Ensures the image stays centered

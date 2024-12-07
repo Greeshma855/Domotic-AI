@@ -5,7 +5,7 @@ const ContactUs = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col md:flex-row items-center justify-between bg-white p-8 md:p-16 space-y-8 md:space-y-0 md:space-x-16 "
+      className="flex flex-col md:flex-row items-center justify-between bg-white p-8 md:p-16 space-y-8 md:space-y-0 md:space-x-16 min-h-screen"
     >
       {/* Form Section */}
       <div className="w-full md:w-1/2 mt-[60px]">

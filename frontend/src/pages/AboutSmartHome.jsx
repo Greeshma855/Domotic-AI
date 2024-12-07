@@ -3,7 +3,7 @@ import bg1 from "../assets/images/bg1.png";
 
 const AboutSmartHome = () => {
   return (
-    <section id="about" className="py-12 bg-gray-100 w-full ">
+    <section id="about" className="py-12 bg-gray-100 w-full min-h-screen ">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-8">
         {/* Text Section */}
         <div className="flex-1">

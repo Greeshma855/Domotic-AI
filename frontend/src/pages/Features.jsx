@@ -8,7 +8,7 @@ import heatingPlan from "../assets/images/heating-plan.png";
 
 const Features = () => {
   return (
-    <section id="features" className="bg-white py-12">
+    <section id="features" className="bg-white py-12 min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-8 text-black mt-[60px]">
           Manage Everything
