@@ -88,7 +88,7 @@ const SignupPage = () => {
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
       {/* Animated Background */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-slate-50 to-slate-100"
+        className="absolute inset-0 bg-gray-900 from-slate-50 to-slate-100"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}

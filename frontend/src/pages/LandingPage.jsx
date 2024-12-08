@@ -81,7 +81,7 @@ const LandingPage = () => {
   const [isLandingComplete, setIsLandingComplete] = useState(false);
 
   return (
-    <div>
+    <div className='bg-gray-900 min-h-screen justify-center items-center'>
       {!isLandingComplete ? (
         // Render the LandingScreen until it is completed
         <LandingScreen onComplete={() => setIsLandingComplete(true)} />

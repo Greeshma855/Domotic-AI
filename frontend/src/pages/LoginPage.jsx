@@ -84,7 +84,7 @@ const LoginPage = ({ onLogin }) => {
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
       {/* Animated Background */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-teal-50 to-blue-100"
+        className="absolute inset-0 bg-gray-900"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}

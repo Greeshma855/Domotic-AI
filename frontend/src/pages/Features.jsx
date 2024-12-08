@@ -143,6 +143,7 @@ import tracking from "../assets/images/tracking.png";
 import autoControl from "../assets/images/auto-control.png";
 import motionSensor from "../assets/images/motion-sensor.png";
 import heatingPlan from "../assets/images/heating-plan.png";
+import { motion } from "framer-motion";
 
 const Features = () => {
   const features = [
@@ -185,7 +186,8 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 py-16">
+    <>
+    <section id="features" className="min-h-screen bg-gray-900 py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
@@ -225,6 +227,17 @@ const Features = () => {
         </div>
       </div>
     </section>
+    <motion.div
+      initial={{ width: 0, opacity: 0 }}
+      animate={{ width: '100%', opacity: 0.3 }}
+      transition={{
+        duration: 1.5,
+        delay: 0.5,
+        ease: "easeInOut"
+      }}
+      className="h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent"
+    />
+    </>
   );
 };
 

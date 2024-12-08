@@ -136,7 +136,7 @@ import { AlertTriangle, Home, ArrowLeft } from 'lucide-react';
 
 const Custom404 = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden">
         <div className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white p-12 flex flex-col items-center text-center">
           <AlertTriangle className="text-yellow-300 mb-6" size={80} strokeWidth={1.5} />

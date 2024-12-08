@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import { 
   BarChart, 
   Bar, 
@@ -20,6 +21,7 @@ import {
   Clock, 
   Battery
 } from 'lucide-react';
+import Sidebar from "./components/Sidebar";
 
 const Card = ({ children, className = '' }) => (
   <div className={`bg-white rounded-lg shadow ${className}`}>
@@ -35,6 +37,10 @@ const CardContent = ({ children, className = '' }) => (
 
 const AnalyticsDashboard = () => {
   // Sample data for charts
+  const [isExpanded, setIsExpanded] = useState(false);
+  const handleLogout = () => {
+    navigate("/login");
+  };
   const monthlyData = [
     { name: 'Jan', usage: 2400, efficiency: 1400, cost: 2400 },
     { name: 'Feb', usage: 1398, efficiency: 2210, cost: 2210 },
@@ -95,7 +101,12 @@ const AnalyticsDashboard = () => {
   ];
 
   return (
-    <div className="p-6 bg-blue-50/30 min-h-screen">
+    <>
+    <Sidebar
+    isExpanded={isExpanded}
+    onLogout={handleLogout}
+  />
+    <div  className="p-6 bg-gray-900 min-h-screen">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-800">Analytics Dashboard</h1>
         <p className="text-gray-600">Monitor your smart home performance</p>
@@ -226,7 +237,10 @@ const AnalyticsDashboard = () => {
         </Card>
       </div>
     </div>
+    </>
   );
 };
 
 export default AnalyticsDashboard;
+
+

@@ -89,6 +89,7 @@
 
 import React, { useState } from 'react';
 import { Mail, User, MessageCircle, Send } from 'lucide-react';
+import {motion} from "framer-motion"
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -142,7 +143,8 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 flex items-center justify-center px-4 py-12">
+    <>
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-4xl mx-auto grid md:grid-cols-2 bg-white shadow-2xl rounded-2xl overflow-hidden">
         {/* Contact Information Side */}
         <div className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white p-12 flex flex-col justify-center">
@@ -237,6 +239,17 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
+    <motion.div
+      initial={{ width: 0, opacity: 0 }}
+      animate={{ width: '100%', opacity: 0.3 }}
+      transition={{
+        duration: 1.5,
+        delay: 0.5,
+        ease: "easeInOut"
+      }}
+      className="h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent"
+    />
+    </>
   );
 };
 
