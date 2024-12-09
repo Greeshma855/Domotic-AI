@@ -1,4 +1,4 @@
-const ESP32_API_BASE_URL = "http://172.168.3.165"; // Replace with your ESP32's IP address
+const ESP32_API_BASE_URL = "http://172.168.0.37"; // Replace with your ESP32's IP address
 
 export const bulbService = {
   async toggleBulb(state) {

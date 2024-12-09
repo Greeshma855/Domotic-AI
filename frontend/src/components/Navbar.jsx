@@ -86,7 +86,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full flex justify-between items-center px-10 py-4 bg-transparent shadow-none shadow-md z-50">
+    <nav className="top-0 left-0 w-full flex justify-between items-center px-10 py-4 bg-transparent shadow-none shadow-md z-50">
       {/* Logo with Gradient Effect */}
       <div
         className="text-3xl font-bold cursor-pointer text-gradient bg-gradient-to-r from-teal-600 to-blue-500 bg-clip-text text-transparent"

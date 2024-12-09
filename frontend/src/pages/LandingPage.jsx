@@ -67,12 +67,9 @@
 
 
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import SmartHome from './SmartHome';
-import AboutSmartHome from './AboutSmartHome';
 import Features from './Features';
-import Window from './Window';
 import FAQ from './FAQ';
 import ContactUs from './Contactus';
 import LandingScreen from './LandingScreen';
@@ -88,20 +85,19 @@ const LandingPage = () => {
       ) : (
         // Render the rest of the page after the landing screen is complete
         <>
-          <Navbar />
           <main>
             <section id="smart-home">
               <SmartHome />
             </section>
-            <section id="about">
+            {/* <section id="about">
               <AboutSmartHome />
-            </section>
+            </section> */}
             <section id="features">
               <Features />
             </section>
-            <section id="window">
+            {/* <section id="window">
               <Window />
-            </section>
+            </section> */}
             <section id="faq">
               <FAQ />
             </section>
