@@ -47,7 +47,7 @@ const AboutSmartHome = () => {
       <div className="container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
         {/* Text Section */}
         <div>
-          <h2 className="text-4xl font-bold mb-8 text-gray-800 text-center md:text-left">
+          <h2 className="text-4xl font-bold mb-8 bg-clip-text text-center text-transparent bg-gradient-to-r from-blue-500 to-purple-600text-center md:text-left">
             About Smart Home
           </h2>
           <div className="space-y-4">

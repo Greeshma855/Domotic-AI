@@ -38,7 +38,7 @@ const FAQ = () => {
     <div className="min-h-screen bg-gray-900 flex items-center justify-center py-16 px-4">
       <div className="w-full max-w-3xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto">

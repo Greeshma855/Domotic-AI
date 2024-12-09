@@ -190,7 +190,7 @@ const Features = () => {
     <section id="features" className="min-h-screen bg-gray-900 py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 mb-4">
             Manage Everything
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
