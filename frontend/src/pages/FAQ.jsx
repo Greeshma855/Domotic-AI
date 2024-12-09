@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import {motion} from 'framer-motion'
@@ -41,7 +40,7 @@ const FAQ = () => {
           <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-gray-600 max-w-xl mx-auto">
+          <p className="text-gray-400 max-w-xl mx-auto">
             Got questions? We've got answers. Here are some common inquiries about our smart home solutions.
           </p>
         </div>
@@ -50,20 +49,20 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-2xl shadow-md overflow-hidden"
+              className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-700"
             >
               <div
                 onClick={() => toggleFAQ(index)}
-                className="flex justify-between items-center p-6 cursor-pointer hover:bg-gray-50 transition"
+                className="flex justify-between items-center p-6 cursor-pointer hover:bg-gray-700 transition"
               >
                 <div className="flex items-center space-x-4">
-                  <faq.icon className="text-indigo-500" size={24} />
-                  <span className="text-lg font-medium text-gray-800">
+                  <faq.icon className="text-blue-500" size={24} />
+                  <span className="text-lg font-medium text-gray-200">
                     {faq.question}
                   </span>
                 </div>
                 <ChevronDown 
-                  className={`text-gray-500 transition-transform duration-300 ${
+                  className={`text-gray-400 transition-transform duration-300 ${
                     activeIndex === index ? 'rotate-180' : ''
                   }`} 
                   size={24} 
@@ -71,8 +70,8 @@ const FAQ = () => {
               </div>
               
               {activeIndex === index && (
-                <div className="bg-indigo-50 p-6 border-t">
-                  <p className="text-gray-700">{faq.answer}</p>
+                <div className="bg-gray-700 p-6 border-t border-gray-600">
+                  <p className="text-gray-300">{faq.answer}</p>
                 </div>
               )}
             </div>
