@@ -384,11 +384,11 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Card, CardContent, DeviceIcon } from "./components/SmartHomeComponents";
-import Modal from "./components/Modal";
-import Sidebar from "./components/Sidebar";
-import { bulbService } from "./services/bulbService";
-import { fanService } from "./services/fanService";
+import { Card, CardContent, DeviceIcon } from "../components/SmartHomeComponents";
+import Modal from "../components/Modal";
+import Sidebar from "../components/Sidebar";
+import { bulbService } from "../services/bulbService";
+import { fanService } from "../services/fanService";
 
 const SmartHomeDashboard = () => {
   

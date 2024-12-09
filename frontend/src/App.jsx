@@ -82,7 +82,7 @@ import { Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
-import SmartHomeDashboard from "./SmartHomeDashboard";
+import SmartHomeDashboard from "./pages/SmartHomeDashboard";
 import Custom404 from "./pages/Custom404";
 
 
