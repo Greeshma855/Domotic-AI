@@ -5,17 +5,16 @@
 //   Plus,
 //   Search,
 //   Settings,
-//   ChevronLeft,
-//   ChevronRight,
 // } from "lucide-react";
 // import { motion } from "framer-motion";
-// import { Card, CardContent, DeviceIcon } from "./components/SmartHomeComponents";
-// import Modal from "./components/Modal";
-// import Sidebar from "./components/Sidebar";
-// import { bulbService } from "./services/bulbService";
-// import { fanService } from "./services/fanService";
+// import { Card, CardContent, DeviceIcon } from "../components/SmartHomeComponents";
+// import Modal from "../components/Modal";
+// import Sidebar from "../components/Sidebar";
+// import { bulbService } from "../services/bulbService";
+// import { fanService } from "../services/fanService";
 
 // const SmartHomeDashboard = () => {
+  
 //   const navigate = useNavigate();
 //   const [isModalOpen, setIsModalOpen] = useState(false);
 //   const [isExpanded, setIsExpanded] = useState(false);
@@ -65,11 +64,15 @@
 //     { room: "Basement", percentage: 20 },
 //   ];
 
-//   // Effects and handlers remain the same as in your original code
 //   const handleAddDevice = (newDevice) => {
 //     setDevices((prevDevices) => [...prevDevices, newDevice]);
 //   };
 
+//   const handleSidebarToggle = () => {
+//     setIsExpanded(!isExpanded);
+//   };  
+
+  
 //   useEffect(() => {
 //     const fetchBulbStatus = async () => {
 //       try {
@@ -179,63 +182,64 @@
 //   };
 
 //   return (
-//     <div className="flex min-h-screen bg-gray-900 bg-clip-text text-transparent">
-
+//     <div className="flex min-h-screen bg-gray-900 text-gray-100">
 //       <div className="fixed bottom-4 right-4 z-50 space-y-2">
 //         {bulbError && (
-//           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+//           <div className="bg-red-900 border border-red-700 text-red-200 px-4 py-3 rounded">
 //             {bulbError}
 //           </div>
 //         )}
 
 //         {fanError && (
-//           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+//           <div className="bg-red-900 border border-red-700 text-red-200 px-4 py-3 rounded">
 //             {fanError}
 //           </div>
 //         )}
 //       </div>
 
 //       <Sidebar
-//         isExpanded={isExpanded}
-//         onLogout={handleLogout}
+//       isExpanded={isExpanded}
+//       onToggle={handleSidebarToggle}
+//       onLogout={handleLogout}
 //       />
+
 
 //       <div
 //         className={`flex-1 ${
 //           isExpanded ? "ml-64" : "ml-16"
 //         } transition-all duration-300 bg-gray-900`}
 //       >
-//         <header className="bg-white/80 backdrop-blur-sm p-4 flex justify-between items-center shadow-sm border-b border-white/20">
+//         <header className="bg-gray-800/80 backdrop-blur-sm p-4 flex justify-between items-center shadow-sm border-b border-gray-700">
 //           <div className="flex items-center space-x-4">
-//             <motion.button
+//             {/* <motion.button
 //               whileHover={{ scale: 1.05 }}
 //               whileTap={{ scale: 0.95 }}
 //               onClick={() => setIsExpanded(!isExpanded)}
-//               className="text-gray-600 hover:text-gray-800 transition-colors"
+//               className="text-gray-400 hover:text-gray-200 transition-colors"
 //             >
 //               {isExpanded ? (
 //                 <ChevronLeft className="w-6 h-6" />
 //               ) : (
 //                 <ChevronRight className="w-6 h-6" />
 //               )}
-//             </motion.button>
-//             <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-indigo-600 ">
+//             </motion.button> */}
+//             <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-indigo-400">
 //               Smart Home
 //             </h1>
 //           </div>
-//           <div className="flex items-center space-x-4 bg-gray-900">
+//           <div className="flex items-center space-x-4 ">
 //             <div className="relative">
 //               <input
 //                 type="search"
 //                 placeholder="Search here"
-//                 className="pl-10 pr-4 py-2 rounded-lg border border-gray-200 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all"
+//                 className="pl-10 pr-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-gray-100 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all"
 //               />
 //               <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
 //             </div>
 //             <motion.button
 //               whileHover={{ scale: 1.05 }}
 //               whileTap={{ scale: 0.95 }}
-//               className="text-gray-600 hover:text-gray-800 transition-colors"
+//               className="text-gray-400 hover:text-gray-100 transition-colors"
 //             >
 //               <Settings className="h-6 w-6" />
 //             </motion.button>
@@ -243,7 +247,7 @@
 //               <motion.button
 //                 whileHover={{ scale: 1.05 }}
 //                 whileTap={{ scale: 0.95 }}
-//                 className="text-gray-600 hover:text-gray-800 transition-colors"
+//                 className="text-gray-400 hover:text-gray-100 transition-colors"
 //               >
 //                 <Bell className="h-6 w-6" />
 //               </motion.button>
@@ -255,18 +259,18 @@
 //         <div className="p-6 space-y-6">
 //           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 //             {stats.map((stat, index) => (
-//               <Card key={index}>
+//               <Card key={index} className="bg-gray-800 border-gray-700">
 //                 <CardContent className="text-center">
 //                   <motion.h2
-//                     className="text-4xl font-bold bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent"
+//                     className="text-4xl font-bold bg-gradient-to-r from-violet-500 to-indigo-400 bg-clip-text text-transparent"
 //                     initial={{ scale: 0 }}
 //                     animate={{ scale: 1 }}
 //                     transition={{ delay: index * 0.1 }}
 //                   >
 //                     {stat.value}
-//                     <span className="text-2xl text-gray-400">{stat.unit}</span>
+//                     <span className="text-2xl text-gray-500">{stat.unit}</span>
 //                   </motion.h2>
-//                   <p className="text-gray-700">{stat.label}</p>
+//                   <p className="text-gray-300">{stat.label}</p>
 //                   <p className="text-sm text-gray-500">{stat.sublabel}</p>
 //                 </CardContent>
 //               </Card>
@@ -274,7 +278,7 @@
 //           </div>
 
 //           <div className="flex justify-between items-center">
-//             <h2 className="text-lg font-semibold bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
+//             <h2 className="text-lg font-semibold bg-gradient-to-r from-violet-500 to-indigo-400 bg-clip-text text-transparent">
 //               Connected Devices
 //             </h2>
 //             <motion.button
@@ -294,8 +298,8 @@
 //                 key={index}
 //                 className={`cursor-pointer transition-all duration-300 ${
 //                   device.status === "on"
-//                     ? "bg-gradient-to-br from-violet-100 to-indigo-100 border-2 border-violet-500"
-//                     : "border-2 border-gray-200"
+//                     ? "bg-gradient-to-br from-violet-900/50 to-indigo-900/50 border-2 border-violet-700"
+//                     : "bg-gray-800 border-2 border-gray-700"
 //                 }`}
 //                 onClick={() => toggleDevice(index)}
 //               >
@@ -303,18 +307,18 @@
 //                   <DeviceIcon
 //                     type={device.type}
 //                     className={`h-10 w-10 mx-auto ${
-//                       device.status === "on" ? "text-violet-600" : "text-gray-400"
+//                       device.status === "on" ? "text-violet-400" : "text-gray-500"
 //                     }`}
 //                   />
-//                   <h3 className="mt-2 text-xl font-bold text-gray-800">
+//                   <h3 className="mt-2 text-xl font-bold text-gray-100">
 //                     {device.name}
 //                   </h3>
-//                   <p className="text-gray-500">{device.lastActive}</p>
+//                   <p className="text-gray-400">{device.lastActive}</p>
 //                   <motion.div
 //                     className={`mt-2 px-3 py-1 rounded-full text-sm inline-block ${
 //                       device.status === "on"
-//                         ? "bg-violet-100 text-violet-800"
-//                         : "bg-gray-100 text-gray-800"
+//                         ? "bg-violet-900 text-violet-200"
+//                         : "bg-gray-700 text-gray-300"
 //                     }`}
 //                     animate={{
 //                       scale: device.status === "on" ? [1, 1.1, 1] : 1,
@@ -328,20 +332,20 @@
 //             ))}
 //           </div>
 
-//           <Card>
+//           <Card className="bg-gray-800 border-gray-700">
 //             <CardContent>
-//               <h2 className="text-lg font-semibold mb-4 bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
+//               <h2 className="text-lg font-semibold mb-4 bg-gradient-to-r from-violet-500 to-indigo-400 bg-clip-text text-transparent">
 //                 Room Energy Consumption
 //               </h2>
 //               <div className="space-y-4">
 //                 {roomConsumption.map((room, index) => (
 //                   <div key={index} className="space-y-2">
-//                     <div className="flex justify-between text-sm text-gray-600">
+//                     <div className="flex justify-between text-sm text-gray-400">
 //                       <span>{room.room}</span>
 //                       <span>{room.percentage}%</span>
 //                     </div>
 //                     <motion.div
-//                       className="h-2 bg-gray-200 rounded-full overflow-hidden"
+//                       className="h-2 bg-gray-700 rounded-full overflow-hidden"
 //                       initial={{ opacity: 0 }}
 //                       animate={{ opacity: 1 }}
 //                       transition={{ delay: index * 0.1 }}
@@ -373,6 +377,42 @@
 // export default SmartHomeDashboard;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -380,8 +420,6 @@ import {
   Plus,
   Search,
   Settings,
-  ChevronLeft,
-  ChevronRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Card, CardContent, DeviceIcon } from "../components/SmartHomeComponents";
@@ -389,6 +427,8 @@ import Modal from "../components/Modal";
 import Sidebar from "../components/Sidebar";
 import { bulbService } from "../services/bulbService";
 import { fanService } from "../services/fanService";
+import { temperatureService } from '../services/temperatureService';
+import { humidityService } from '../services/humidityService';
 
 const SmartHomeDashboard = () => {
   
@@ -397,6 +437,8 @@ const SmartHomeDashboard = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [bulbError, setBulbError] = useState(null);
   const [fanError, setFanError] = useState(null);
+  const [temperature, setTemperature] = useState(null);
+  const [humidity, setHumidity] = useState(null);     
   const [devices, setDevices] = useState([
     {
       name: "Humidity Sensor",
@@ -486,6 +528,32 @@ const SmartHomeDashboard = () => {
     };
 
     fetchFanStatus();
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(async () => {
+      try {
+        const temperatureData = await temperatureService.getTemperature();
+        setTemperature(temperatureData.temperature);
+      } catch (error) {
+        console.error('Error fetching temperature:', error);
+      }
+    }, 15000); // Fetch temperature every 15 seconds
+  
+    return () => clearInterval(interval);
+  }, []);
+  
+  useEffect(() => {
+    const interval = setInterval(async () => {
+      try {
+        const humidityData = await humidityService.getHumidity();
+        setHumidity(humidityData.humidity);
+      } catch (error) {
+        console.error('Error fetching humidity:', error);
+      }
+    }, 10000); // Fetch humidity every 10 seconds
+  
+    return () => clearInterval(interval);
   }, []);
 
   const toggleDevice = async (index) => {
@@ -634,6 +702,43 @@ const SmartHomeDashboard = () => {
         </header>
 
         <div className="p-6 space-y-6">
+
+        <div className="space-y-4">
+  <div className="flex justify-between text-sm text-gray-400">
+    <span>Temperature</span>
+    <span>{temperature ? `${temperature}°C` : 'Loading...'}</span>
+  </div>
+  <motion.div
+    className="h-2 bg-gray-700 rounded-full overflow-hidden"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+  >
+    <motion.div
+      className="h-full bg-gradient-to-r from-violet-600 to-indigo-600"
+      style={{ width: temperature ? `${(temperature - 0) / (40 - 0) * 100}%` : '0%' }}
+      transition={{ duration: 1 }}
+    />
+  </motion.div>
+
+  <div className="flex justify-between text-sm text-gray-400">
+    <span>Humidity</span>
+    <span>{humidity ? `${humidity}%` : 'Loading...'}</span>
+  </div>
+  <motion.div
+    className="h-2 bg-gray-700 rounded-full overflow-hidden"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+  >
+    <motion.div
+      className="h-full bg-gradient-to-r from-violet-600 to-indigo-600"
+      style={{ width: humidity ? `${humidity}%` : '0%' }}
+      transition={{ duration: 1 }}
+    />
+  </motion.div>
+</div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {stats.map((stat, index) => (
               <Card key={index} className="bg-gray-800 border-gray-700">
